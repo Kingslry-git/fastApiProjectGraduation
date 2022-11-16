@@ -77,9 +77,16 @@ def log(event):
 # text.get()
 # ttk.Label(root,text='hello world', font=('hack',)).pack(ipadx=10,ipady=10)
 
-imag1 = tk.PhotoImage('.png')
-image_label = ttk.Label(root, image=imag1, compound='top')
-image_label.pack()
+img1 = tk.PhotoImage(file='./assets/logo.png')
+img_label = ttk.Label(root,
+                      image=img1,
+                      text='logo',
+                      compound='top')
+img_label.pack()
+
+btn = ttk.Button(root,
+                 text='exit!',
+                 command=lambda: root.quit()).pack()
 
 root.mainloop()
 # root1.mainloop()
